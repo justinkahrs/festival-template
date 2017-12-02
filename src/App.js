@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Grid, Row } from 'react-bootstrap';
 import Navigation from './Navigation';
-
+import Home from './pages/Home';
+import Tickets from './pages/Tickets';
+import Lineup from './pages/Lineup';
+import Schedule from './pages/Schedule';
+import MyTrip from './pages/MyTrip';
+import GetInvolved from './pages/GetInvolved';
+import News from './pages/News';
 import './App.css';
-
-const Home = () => <div>Home</div>;
-const Tickets = () => <div>Tickets</div>;
-const Lineup = () => <div>Lineup</div>;
-const Schedule = () => <div>Schedule</div>;
-const MyTrip = () => <div>My Trip</div>;
-const GetInvolved = () => <div>Get Involved</div>;
-const News = () => <div>News</div>;
 
 class App extends Component {
   constructor(props) {
