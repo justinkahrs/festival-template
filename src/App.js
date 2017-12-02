@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Grid, Row } from 'react-bootstrap';
+import Navigation from './Navigation';
+
 import './App.css';
 
+const Home = () => <div>Home</div>;
+const Tickets = () => <div>Tickets</div>;
+const Lineup = () => <div>Lineup</div>;
+const Schedule = () => <div>Schedule</div>;
+const MyTrip = () => <div>My Trip</div>;
+const GetInvolved = () => <div>Get Involved</div>;
+const News = () => <div>News</div>;
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <Grid>
+          <Navigation />
+          <Row>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/tickets" component={Tickets} />
+            <Route exact path="/lineup" component={Lineup} />
+            <Route exact path="/schedule" component={Schedule} />
+            <Route exact path="/myTrip" component={MyTrip} />
+            <Route exact path="/getInvolved" component={GetInvolved} />
+            <Route exact path="/news" component={News} />
+          </Row>
+        </Grid>
+      </Router>
     );
   }
 }
