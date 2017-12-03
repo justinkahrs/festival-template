@@ -1,0 +1,28 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgreen;
+  padding-bottom: 1em;
+}
+
+.navItem {
+  border: 1px solid;
+  padding: 0.5em;
+}
+.first {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+.last {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5em;
+}

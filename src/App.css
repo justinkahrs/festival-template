@@ -1,21 +1,14 @@
-.center {
-  align-self: center;
+.container {
 }
-
-ul {
-  display: flex;
-  flex-direction: row;
-  width: auto;
+.content {
+  text-align: center;
+  background-color: lightblue;
+  padding: 5em;
+  min-height: 50vh;
 }
-
-li {
-  list-style-type: none;
-  padding: 3em;
-}
-.middle-left {
-  padding-right: 10em;
-}
-
-.middle-right {
-  padding-left: 10em;
+.footer {
+  text-align: center;
+  background-color: lightsalmon;
+  min-height: 26vh;
+  
 }
