@@ -1,15 +1,25 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const markerStyle = {
+const venueMarker = {
+  lineHeight: '40px',
+  textAlign: 'center',
   color: 'white',
-  backgroundColor: 'lightblue',
-  height: 50,
-  width: 50,
-  fontSize: '28px',
+  backgroundColor: 'purple',
+  height: 40,
+  width: 40,
+  fontSize: '24px',
   borderRadius: '50%',
 };
-
+const parkingMarker = {
+  lineHeight: '40px',
+  textAlign: 'center',
+  color: 'white',
+  backgroundColor: 'blue',
+  height: 40,
+  width: 40,
+  fontSize: '24px',
+};
 class SimpleMap extends React.Component {
   static defaultProps = {
     center: { lat: 39.165609, lng: -86.534238 },
@@ -20,8 +30,14 @@ class SimpleMap extends React.Component {
     return (
       <div style={{ width: '100%', height: '700px' }}>
         <GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-          <div style={markerStyle} lat={39.165609} lng={-86.534238}>
+          <div style={venueMarker} lat={39.165509} lng={-86.534138}>
             JK
+          </div>
+          <div style={venueMarker} lat={39.163609} lng={-86.532238}>
+            AV
+          </div>
+          <div style={parkingMarker} lat={39.165509} lng={-86.532238}>
+            P
           </div>
         </GoogleMapReact>
       </div>
