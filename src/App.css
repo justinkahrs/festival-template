@@ -1,14 +1,10 @@
-.container {
-}
 .content {
+  background-color: lightcyan;
   text-align: center;
-  background-color: lightblue;
   padding: 5em;
-  min-height: 50vh;
 }
 .footer {
   text-align: center;
   background-color: lightsalmon;
   min-height: 26vh;
-  
 }
