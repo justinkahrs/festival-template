@@ -20,6 +20,9 @@ const parkingMarker = {
   width: 40,
   fontSize: '24px',
 };
+
+const Venue = ({ text }) => <div style={venueMarker}>{text}</div>;
+const Parking = () => <div style={parkingMarker}>P</div>;
 class SimpleMap extends React.Component {
   static defaultProps = {
     center: { lat: 39.165609, lng: -86.534238 },
@@ -30,15 +33,9 @@ class SimpleMap extends React.Component {
     return (
       <div style={{ width: '100%', height: '700px' }}>
         <GoogleMapReact defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-          <div style={venueMarker} lat={39.165509} lng={-86.534138}>
-            JK
-          </div>
-          <div style={venueMarker} lat={39.163609} lng={-86.532238}>
-            AV
-          </div>
-          <div style={parkingMarker} lat={39.165509} lng={-86.532238}>
-            P
-          </div>
+          <Venue lat={39.165509} lng={-86.534138} text="JK" />
+          <Venue lat={39.165109} lng={-86.536138} text="AV" />
+          <Parking lat={39.165809} lng={-86.531138} />
         </GoogleMapReact>
       </div>
     );
